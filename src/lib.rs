@@ -533,11 +533,11 @@ impl Plugin for OutlinePlugin {
         .add_render_graph_edges(
             Core3d,
             (
-                Node3d::Tonemapping,
+                Node3d::MotionBlur,
                 NodeOutline::MsaaExtraWritebackPass,
                 NodeOutline::OutlinePass,
                 NodeOutline::EndOutlinePasses,
-                Node3d::EndMainPassPostProcessing,
+                Node3d::Bloom,
             ),
         )
         // ...and before any later anti-aliasing.
