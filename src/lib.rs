@@ -583,7 +583,7 @@ impl Plugin for OutlinePlugin {
             Core3d,
             (msaa_extra_writeback_pass, outline_render_pass)
                 .chain()
-                .in_set(Core3dSystems::PostProcess)
+                .in_set(Core3dSystems::EarlyPostProcess)
                 .after(tonemapping)
                 .before(fxaa)
                 .before(smaa),
